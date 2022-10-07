@@ -4,7 +4,7 @@ import time
 
 # Every zombie will inherit from this class
 class Zombie:
-     def __init__(self, game: Game, tile, name, health, attack):
+     def __init__(self, name, health, attack):
           self.name = name
           self.health = health
           self.attack = attack

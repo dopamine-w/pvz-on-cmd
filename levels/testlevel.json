@@ -17,18 +17,267 @@
                "time_before_zombies": 10,
 
                "wave_zombies": {
-                    "wave_1": [
-                         "Zombies(basic)@3x9"
-                    ]
+                    "wave_1": {
+                         "zombie_basic": {"tile": "3x9"}
+                    }
                }
           },
 
           "lawn": {
-               "row1": ["lawnmower", "column1", "column2", "column3", "column4", "column5", "column6", "column7", "column8", "column9"],
-               "row2": ["lawnmower", "column1", "column2", "column3", "column4", "column5", "column6", "column7", "column8", "column9"],
-               "row3": ["lawnmower", "column1", "column2", "column3", "column4", "column5", "column6", "column7", "column8", "column9"],
-               "row4": ["lawnmower", "column1", "column2", "column3", "column4", "column5", "column6", "column7", "column8", "column9"],
-               "row5": ["lawnmower", "column1", "column2", "column3", "column4", "column5", "column6", "column7", "column8", "column9"]
+               "row1": {
+                    "lawnmower": {
+                         "onLawn": true
+                    },
+
+                    "col1": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col2": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col3": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col4": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col5": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col6": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col7": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col8": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col9": {
+                         "plants": {},
+                         "zombies": {}
+                    }
+               },
+
+               "row2": {
+                    "lawnmower": {
+                         "onLawn": true
+                    },
+
+                    "col1": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col2": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col3": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col4": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col5": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col6": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col7": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col8": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col9": {
+                         "plants": {},
+                         "zombies": {}
+                    }
+               },
+
+               "row3": {
+                    "lawnmower": {
+                         "onLawn": true
+                    },
+
+                    "col1": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col2": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col3": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col4": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col5": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col6": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col7": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col8": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col9": {
+                         "plants": {},
+                         "zombies": {}
+                    }
+               },
+
+               "row4": {
+                    "lawnmower": {
+                         "onLawn": true
+                    },
+
+                    "col1": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col2": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col3": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col4": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col5": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col6": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col7": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col8": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col9": {
+                         "plants": {},
+                         "zombies": {}
+                    }
+               },
+
+               "row5": {
+                    "lawnmower": {
+                         "onLawn": true
+                    },
+
+                    "col1": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col2": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col3": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col4": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col5": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col6": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col7": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col8": {
+                         "plants": {},
+                         "zombies": {}
+                    },
+
+                    "col9": {
+                         "plants": {},
+                         "zombies": {}
+                    }
+               }
           }
      }
 ]

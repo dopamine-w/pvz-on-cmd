@@ -1,4 +1,3 @@
-from game import Game
 from plants import Plant
 import time
 

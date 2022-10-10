@@ -54,7 +54,7 @@ class Level_Runner:
                     }
                }
 
-               self.lawn[f"row{tile_row}"][f"col{tile_column}"]["zombies"].update(zombie_data)
+               self.lawn[f"row{tile_row}"][f"col{tile_column}"]["zombie"].update(zombie_data)
 
           if _type != None:
                self.lawn[f"row{tile_row}"][f"col{tile_column}"][_type].update(item)
@@ -67,12 +67,12 @@ class Level_Runner:
 
           while current_wave != max_waves:
                for j in waves[f"wave_{current_wave}"]:
-                    tile = j["tile"]
+                    tile = waves[f"wave_{current_wave}"][j]["tile"]
 
                     self.tile_place(tile, j)
 
      # Moves zombies around.
-     def move_zombies(self):
+     def move_zombie(self):
           for i in range(len(self.lawn)):
                i += 1
                if i == 10: break
@@ -81,25 +81,48 @@ class Level_Runner:
                     j += 1
                     if j == 10: break
 
-                    for zombie in self.lawn[f"row{i}"][f"col{j}"]["zombies"]:
-                         self.tile_place(f"{i}x{j}", zombie, "zombie", )
-                         del self.lawn[f"row{i}"][f"col{j}"]["zombies"][zombie]
+                    for zombie in self.lawn[f"row{i}"][f"col{j}"]["zombie"]:
+                         self.tile_place(f"{i}x{j}", zombie, "zombie")
+                         del self.lawn[f"row{i}"][f"col{j}"]["zombie"][zombie]
 
                time.sleep(3)
 
      # Shows the level stuff, like zombies, plants, etc
      def show_level(self):
           levelstr = ""
+          levelarr: list = ["lawnmower"]
+          temp_arr = []
 
           for i in range(len(self.lawn)):
                i += 1
-               levelstr += (f"Row {i}: " + str(self.lawn[f"row{i}"]) + "\n")
+
+               for j in range(len(self.lawn[f"row{i}"])):
+                    j += 1
+
+                    if j == 10: break
+
+                    if "pumpkin" in self.lawn[f"row{i}"][f"col{j}"]["plants"]:
+                         for k in self.lawn[f"row{i}"][f"col{j}"]["plants"]:
+                              if k != "pumpkin":
+                                   levelarr.append(f"({k})")
+
+                    if (len(self.lawn[f"row{i}"][f"col{j}"]["plants"]) == 0) and len(self.lawn[f"row{i}"][f"col{j}"]["zombie"]) == 0:
+                         levelarr.append(f"col{j}")
+
+                    elif (len(self.lawn[f"row{i}"][f"col{j}"]["plants"]) == 0) and (len(self.lawn[f"row{i}"][f"col{j}"]["zombie"]) > 0):
+                         for k in self.lawn[f"row{i}"][f"col{j}"]["zombie"]:
+                              temp_arr.append(k)
+
+                              levelarr.append(temp_arr)
+
+               levelstr += (f"Row {i}: " + str(levelarr) + "\n")
+               levelarr = ["lawnmower"]
 
           print(levelstr)
 
      # Runs the level
      def run_level(self):
-          processes = [threading.Thread(target=self.show_level()), threading.Thread(target=self.new_wave()), threading.Thread(target=self.move_zombies())]
+          processes = [threading.Thread(target=self.show_level()), threading.Thread(target=self.new_wave())]
           
           for process in processes:
                process.start()
@@ -109,7 +132,6 @@ class Level_Runner:
                     return
 
                self.show_level()
-               self.move_zombies()
                self.new_wave()
 
                time.sleep(1)

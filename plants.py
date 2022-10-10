@@ -5,7 +5,7 @@ import json
 class Plant:
      def __init__(self, name, levelname, health, attack = 0):
           self.name = name
-          self.levelname = f"levels/{levelname}.json"
+          self.level = json.load(open(f"levels/{levelname}.json", "r"))
           self.health = health
           self.attack = attack
 
@@ -17,14 +17,4 @@ class Sunflower(Plant):
           return super().__init_subclass__()
 
      def usage(self):
-          while self.plantonfield == True:
-               if self.health == 0:
-                    self.plantonfield = False
-                    self.destroy()
-
-          with open(self.levelname, "r") as level:
-               level_json = json.load(level)
-
-               level_json[0]["level_variables"]["sun"] += 0
-
-               level.close()
+          pass

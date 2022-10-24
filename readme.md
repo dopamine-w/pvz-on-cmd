@@ -1,6 +1,8 @@
 # PvZ CMD
 A random application that allows you to play Plants vs Zombies on command line because why not?
 
+VERY SUBTLE DISCORD PLUG: https://discord.gg/nBaegnvJAx
+
 Currently, this thing isn't even playable. Hopefully though, later on, everything will work as intended. When the test level finally works as intended, I will implement a few goals for this project:
 
 * All PvZ 1 Levels

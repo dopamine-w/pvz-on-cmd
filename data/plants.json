@@ -1,0 +1,19 @@
+[
+     {
+          "plants": {
+               "sunflower": {
+                    "class": "plant",
+                    "health": 300,
+                    "damage": 0,
+                    "on_planted_func": "increase_sun,50"
+               },
+
+               "peashooter": {
+                    "class": "plant",
+                    "health": 200,
+                    "damage": 20,
+                    "on_planted_func": "attack_zombie,0,20"
+               }
+          }
+     }
+]

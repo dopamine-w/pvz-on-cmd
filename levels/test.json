@@ -1,0 +1,21 @@
+[
+     {
+          "LevelSettings": {
+               "seed_settings": "level_picked"
+          },
+
+          "LevelVariables": {
+               "sun": 50,
+               "plants": ["sunflower"],
+               "zombies": ["basic"]
+          },
+
+          "Lawn": {
+               "row1": ["lawnmower", null, null, null, null, null, null, null, null, null],
+               "row2": ["lawnmower", null, null, null, null, null, null, null, null, null],
+               "row3": ["lawnmower", [{"sunflower": {"class": "plant","health": 300,"damage":0, "on_planted_func": "increase_sun,50"}}], null, null, null, null, null, null, null, "basic"],
+               "row4": ["lawnmower", null, null, null, null, null, null, null, null, null],
+               "row5": ["lawnmower", null, null, null, null, null, null, null, null, null]
+          }
+     }
+]

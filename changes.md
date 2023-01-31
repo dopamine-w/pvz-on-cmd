@@ -1,8 +1,12 @@
+# An update after FOUR months?????? Unreal.
+I have a life, you know. Anyways, I lost inspiration to code this for a bit because the code was so horrible. So I decided to
+rework the 4 files that have 60 lines of code so that they can be readable to me. And also pumpkin created a problem for
+me while I was testing him so expect him to not release for a long time.
+
 # Changes
-* Displays a plant in a pumpkin using (plant here) (the parenthesis surrounding it is a pumpkin)
-* Changed it back so that only 1 zombie can be on 1 tile. Very sad but maybe I'll change it next update.
-* Removed the code for sunflower because I'm bad at this lol.
-* Temporary title screen. I'll change it when I successfully code all of game.py.
-* The move_zombies function is temporarily not here because I can't get it to work.
+* Everything that sucked has been reworked.
+* Plant and zombie data are now stored in json files (still have yet to add zombies tho...)
+* Created an EntityCode class which stores all the functions needed for the plants, so far, at least.
+* Pumpkin has been removed because he created such a horrible problem in the code last time. Maybe I'll add him later.
 
 Anyways see you in the very rare next update.
